@@ -1,0 +1,60 @@
+
+h1{
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+}
+h3{
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+}
+
+#img1{
+    width: 50px;
+    height: 50px;
+    margin-left: 550px;
+}
+
+#img2{
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+}
+#img3{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#boton{
+    background-image: url("static/images/save.png");
+    margin-left: 220px;
+    width:110px;
+    height:40px;
+}
+
+#div3{
+    background-color: #1dc1bf;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 12px;
+}
+
+span{
+    margin-left: 200px;
+    font-family: 'Karla', sans-serif;
+}
+#sel{
+    margin-left: 200px;
+}
+#asunto{
+    margin-left: 200px;
+}
+#fecha{
+    margin-left: 200px;
+}
+#hora{
+    margin-left: 200px;
+}
+#ms{
+    position: center;
+}

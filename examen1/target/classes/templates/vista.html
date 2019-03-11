@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Citas medicas</title>
+    <link href="vista.css" th:href="@{/vista.css}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+</head>
+
+<body>
+<div id="div1">
+    <h1> Citas Medicas <img src="/images/estetoscopio.png" th:src="@{/images/estetoscopio.png}" id="img3"></h1>
+</div>
+
+<div id="div2">
+    <br>
+    <nav>
+        <ul>
+            <a href="/examen1"><img src="/images/calendario.png" th:src="@{/images/calendario.png}" id="img1"></a>
+            <a><img src="/images/calendariover.png" th:src="@{/images/calendariover.png}" id="img2"
+                    onclick="document.getElementById('ms').show()"></a>
+        </ul>
+    </nav>
+    <br>
+</div>
+
+<h3> Agendar Cita:</h3>
+<div id="div3">
+<form action="/add" method="post" class="f">
+    <br>
+   <span> Medico:</span>
+    <br>
+    <select name="nuevo" id="sel">
+        <option>Dr. Fernandez</option>
+    </select>
+    <br>
+    <br>
+    <span>Asunto:</span>
+    <br>
+    <input type="text" name="nuevo1" id="asunto">
+    <br>
+    <br>
+    <span>Fecha:</span>
+    <br>
+    <input type="Date" date="fecha" id="fecha" name="nuevo2"/>
+    <br>
+    <br>
+    <span>Hora:</span>
+    <br>
+    <input type="time" name="nuevo3" value="11:45:00" max="22:30:00" min="10:00:00" step="1" id="hora" >
+    <br>
+    <br>
+    <input type="submit" value="Agendar Cita" id="boton"/>
+    <br>
+    <br>
+
+</form>
+    <dialog id="ms">
+        <li th:each="fila: ${vista}"
+            th:text="${fila}">
+            valor
+        </li>
+        <button id="close" onclick="document.getElementById('ms').close()">CERRAR</button>
+    </dialog>
+
+</div>
+</body>
+</html>
